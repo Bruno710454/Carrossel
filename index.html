@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+<body>  
+    <main>
+        <div onclick="voltar()" class="img">
+            <img src="icons8-left-48.png" alt="" >
+        </div>
+        <article>
+            <div id="card1">
+                <h1>card-1</h1>
+                <img src="619QaGrReCL._AC_UF894,1000_QL80_ (1).jpg" alt="">
+            </div>
+            <div id="card2">
+                <h1>card-2</h1>
+                <img src="9169455-ceu-dourado-por-do-sol-na-costa-natureza-paisagem-vetor.jpg" alt="">
+            </div>
+            <div id="card3">
+                <h1>card-3</h1>
+                <img src="b076fe7a3293237f68fcba543044b19e.jpg" alt="">
+            </div>
+        </article>
+        <div onclick="avancar()" class="img">
+            <img src="icons8-right-48.png" alt="">
+        </div>
+    </main>
+    <script>
+
+        var c = 0
+        var t = 1
+        function avancar(){
+            var carro = document.getElementById('card1')
+            if (c==0){
+                carro.style.marginLeft = '-236px'
+                c++
+                t++
+            }else if(c==1){
+                carro.style.marginLeft = '-472px'
+                t++
+                c++
+            }
+            
+        }
+
+        function voltar(){
+            var card2 = document.getElementById('card2')
+            var card3 = document.getElementById('card3')
+            var card1 = document.getElementById('card1')
+            if(c==2 || c==1){
+                if (c==2 && t==3){
+                    card1.style.marginLeft='-236px'
+                    c--
+                    t--
+                }else if(c==1 && t==2){
+                    card1.style.marginLeft='0px'
+                    c=0
+                    t=1
+
+                }
+
+            }
+
+        }
+        
+    </script>
+</body>
+</html>
